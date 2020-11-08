@@ -1,7 +1,1 @@
-<div class="cards-container" *ngIf="cards">
-  <custom-option-card
-    *ngFor="let card of cards"
-    [card]="card"
-    (onActionClick)="handleCardClick($event)"
-  ></custom-option-card>
-</div>
+<router-outlet></router-outlet>

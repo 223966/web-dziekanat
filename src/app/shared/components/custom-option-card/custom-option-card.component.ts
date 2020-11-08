@@ -9,13 +9,13 @@ import { Card } from 'src/app/core/models';
 export class CustomOptionCardComponent implements OnInit {
   @Input() card: Card;
 
-  @Output() onActionClick: EventEmitter<boolean> = new EventEmitter<boolean>();
+  @Output() onActionClick: EventEmitter<string> = new EventEmitter<string>();
 
   constructor() {}
 
   ngOnInit(): void {}
 
   emitActionClick(): void {
-    this.onActionClick.emit(true);
+    this.onActionClick.emit(this.card.routerUrl);
   }
 }

@@ -3,4 +3,5 @@ export interface Card {
   description: string;
   imgPath: string;
   actionName: string;
+  routerUrl: string;
 }
