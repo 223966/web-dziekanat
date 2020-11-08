@@ -1,7 +1,18 @@
-<div class="card">
-    <p>hehehe</p>
-    <p>hehehe</p>
-    <p>hehehe</p>
-    <p>hehehe</p>
-    <p>hehehe</p>
+<div class="card-container">
+  <div class="card">
+    <div class="text-continer">
+      <h3>{{ card.title }}</h3>
+      <p>{{ card.description }}</p>
+    </div>
+    <img [src]="card.imgPath" />
+  </div>
+  <custom-button
+    [style.width.%]="50"
+    type="default"
+    color="accent"
+    [actionName]="card.actionName"
+    (click)="emitActionClick()"
+  >
+    {{ card.actionName }}
+  </custom-button>
 </div>

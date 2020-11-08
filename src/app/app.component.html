@@ -1,3 +1,5 @@
 <custom-header></custom-header>
-<!-- App content inside sidebar -->
-<custom-sidebar></custom-sidebar>
+<mat-sidenav-container>
+  <mat-sidenav mode="side" [opened]="showSidebar$ | async"> </mat-sidenav>
+  <router-outlet></router-outlet
+></mat-sidenav-container>

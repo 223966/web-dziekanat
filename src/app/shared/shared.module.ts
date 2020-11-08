@@ -7,14 +7,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { CustomOptionCardComponent } from './components/custom-option-card/custom-option-card.component';
 import { StoreModule } from '@ngrx/store';
 import { headerReducer } from '../shared/components/custom-header/state/header.reducer';
-import { CustomSidebarComponent } from './components/custom-sidebar/custom-sidebar.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { CustomButtonComponent } from './components/custom-button/custom-button.component';
 
 @NgModule({
   declarations: [
     CustomHeaderComponent,
     CustomOptionCardComponent,
-    CustomSidebarComponent,
+    CustomButtonComponent,
   ],
   imports: [
     CommonModule,
@@ -22,12 +22,14 @@ import { MatSidenavModule } from '@angular/material/sidenav';
     MatIconModule,
     MatButtonModule,
     MatSidenavModule,
+    MatButtonModule,
+    MatIconModule,
     StoreModule.forFeature('header', headerReducer),
   ],
   exports: [
     CustomHeaderComponent,
     CustomOptionCardComponent,
-    CustomSidebarComponent,
+    CustomButtonComponent,
   ],
 })
 export class SharedModule {}

@@ -1,5 +1,24 @@
-.card {
+.card-container {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
-  width: 100%;
+  height: 150px;
+  max-width: 100%;
+  padding: 1em;
+  display: grid;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  box-sizing: border-box;
+  height: 100px;
+  gap: 1em;
+  p {
+    margin: 0 !important;
+  }
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
 }

@@ -1,0 +1,15 @@
+<button mat-button [color]="color" *ngIf="type === 'default'">
+  {{ actionName }}
+</button>
+<button mat-raised-button [color]="color" *ngIf="type === 'raised'">
+  {{ actionName }}
+</button>
+<button mat-stroked-button [color]="color" *ngIf="type === 'stroked'">
+  {{ actionName }}
+</button>
+<button mat-flat-button [color]="color" *ngIf="type === 'flat'">
+  {{ actionName }}
+</button>
+<button mat-icon-button [color]="color" *ngIf="type === 'icon'">
+  <mat-icon>{{ iconName }}</mat-icon>
+</button>
