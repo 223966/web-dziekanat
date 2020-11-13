@@ -4,9 +4,12 @@
 }
 
 ::ng-deep .mat-sidenav {
-  width: 300px !important;
+  margin: auto;
 }
 
-::ng-deep .mat-sidenav-content {
+.app-container {
   padding: 3em;
+  max-width: 800px !important;
+  height: 100vh !important;
+  margin: auto;
 }

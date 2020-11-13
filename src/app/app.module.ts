@@ -9,6 +9,8 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { environment } from '../environments/environment';
+import { AuthModule } from './auth/auth.module';
+import { fromEventPattern } from 'rxjs';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,6 +20,7 @@ import { environment } from '../environments/environment';
     BrowserAnimationsModule,
     MatSidenavModule,
     SharedModule,
+    AuthModule,
     StoreModule.forRoot({}, {}),
     StoreDevtoolsModule.instrument({
       maxAge: 25,

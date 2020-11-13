@@ -1,9 +1,12 @@
 <p>
-    <mat-toolbar color="primary">
-     <button mat-icon-button (click)="toggleSidebar()">
+  <mat-toolbar color="primary">
+    <button mat-icon-button (click)="toggleSidebar()">
       <mat-icon>menu</mat-icon>
     </button>
-    <span>Web Dziekanat</span>
+    <span class="clickable" (click)="goToMainPage()">Web Dziekanat</span>
     <span class="example-spacer"></span>
+    <button mat-icon-button (click)="logOut()">
+      <mat-icon>exit_to_app</mat-icon>
+    </button>
   </mat-toolbar>
-  </p>
+</p>

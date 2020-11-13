@@ -1,5 +1,14 @@
-<custom-header></custom-header>
+<custom-header *ngIf="showHeader$ | async"></custom-header>
 <mat-sidenav-container>
-  <mat-sidenav mode="side" [opened]="showSidebar$ | async"> </mat-sidenav>
-  <router-outlet></router-outlet
-></mat-sidenav-container>
+  <mat-sidenav
+    [style.width.%]="isMobile ? 100 : 25"
+    mode="side"
+    [opened]="showSidebar$ | async"
+  >
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div class="app-container">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

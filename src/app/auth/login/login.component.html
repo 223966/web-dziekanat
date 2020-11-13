@@ -1,0 +1,29 @@
+<div class="login-container">
+  <form [formGroup]="loginForm" class="login-form">
+    <img
+      src="assets/images/tul-logo.png"
+      width="220px"
+      style="margin: 0 auto 50px"
+    />
+    <mat-form-field>
+      <mat-label>Email</mat-label>
+      <input matInput placeholder="Email" [formControl]="email" />
+    </mat-form-field>
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input
+        type="password"
+        matInput
+        placeholder="Password"
+        [formControl]="password"
+      />
+    </mat-form-field>
+    <custom-button
+      type="raised"
+      color="primary"
+      actionName="Submit"
+      (click)="submit()"
+      style="margin-top: 40px"
+    ></custom-button>
+  </form>
+</div>

@@ -1,7 +1,12 @@
 <button mat-button [color]="color" *ngIf="type === 'default'">
   {{ actionName }}
 </button>
-<button mat-raised-button [color]="color" *ngIf="type === 'raised'">
+<button
+  mat-raised-button
+  [color]="color"
+  *ngIf="type === 'raised'"
+  [style.width.%]="100"
+>
   {{ actionName }}
 </button>
 <button mat-stroked-button [color]="color" *ngIf="type === 'stroked'">
