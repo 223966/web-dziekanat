@@ -1,1 +1,7 @@
-<p>applications works!</p>
+<h3>Your applications:</h3>
+<div class="document-container" *ngFor="let application of applications">
+  <div class="document">
+    <mat-icon>assignment </mat-icon>
+    <p>{{ application }}</p>
+  </div>
+</div>

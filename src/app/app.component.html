@@ -6,7 +6,7 @@
     [opened]="showSidebar$ | async"
   >
     <mat-nav-list style="margin: 0; padding: 0" *ngFor="let option of options">
-      <a mat-list-item>{{ option }}</a>
+      <a [href]="option.url" mat-list-item>{{ option.name }}</a>
       <mat-divider></mat-divider>
     </mat-nav-list>
   </mat-sidenav>

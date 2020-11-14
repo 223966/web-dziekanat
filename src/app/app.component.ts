@@ -16,7 +16,10 @@ import { State } from './state/app.state';
 export class AppComponent implements OnInit {
   readonly mobileWidth: number = 600;
 
-  readonly options: string[] = ['Documents', 'IFE Website', 'Wikamp'];
+  readonly options: SidebarOption[] = [
+    { name: 'IFE Website', url: 'https://www.ife.p.lodz.pl/' },
+    { name: 'Wikamp', url: 'https://edu.p.lodz.pl/' },
+  ];
 
   showSidebar$: Observable<boolean>;
   showHeader$: Observable<boolean>;
@@ -35,4 +38,9 @@ export class AppComponent implements OnInit {
   onResize(event) {
     this.isMobile = event.innerWidth < this.mobileWidth;
   }
+}
+
+interface SidebarOption {
+  name: string;
+  url: string;
 }

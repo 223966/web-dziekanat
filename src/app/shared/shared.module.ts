@@ -14,6 +14,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSelectModule } from '@angular/material/select';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -35,6 +39,10 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatRadioModule,
     MatMenuModule,
     MatSnackBarModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatTableModule,
     StoreModule.forFeature('header', headerReducer),
   ],
   exports: [
@@ -43,9 +51,15 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     CustomButtonComponent,
     MatInputModule,
     FormsModule,
+    MatNativeDateModule,
     ReactiveFormsModule,
     MatRadioModule,
     MatSnackBarModule,
+    MatSelectModule,
+    MatDatepickerModule,
+    MatIconModule,
+    MatTableModule,
+    FormsModule,
   ],
 })
 export class SharedModule {}
