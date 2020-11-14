@@ -18,11 +18,7 @@ export class CustomHeaderComponent implements OnInit {
     this.store.dispatch(HeaderActions.toggleSidebar());
   }
 
-  goToMainPage(): void {
-    this.router.navigate(['dashboard']);
-  }
-
-  logOut(): void {
-    this.router.navigate(['login']);
+  navigateTo(route: string): void {
+    this.router.navigate([route]);
   }
 }

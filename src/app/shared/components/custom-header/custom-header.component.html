@@ -3,10 +3,26 @@
     <button mat-icon-button (click)="toggleSidebar()">
       <mat-icon>menu</mat-icon>
     </button>
-    <span class="clickable" (click)="goToMainPage()">Web Dziekanat</span>
+    <span class="clickable" (click)="navigateTo('dashboard')"
+      >Web Dziekanat</span
+    >
     <span class="example-spacer"></span>
-    <button mat-icon-button (click)="logOut()">
-      <mat-icon>exit_to_app</mat-icon>
+    <!-- menu -->
+
+    <button mat-button [matMenuTriggerFor]="menu">
+      <img class="avatar" src="assets/images/avatar.png" />
     </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="navigateTo('profile')">
+        <mat-icon>person</mat-icon>
+        <span>My profile</span>
+      </button>
+      <button mat-menu-item (click)="navigateTo('login')">
+        <mat-icon>exit_to_app</mat-icon>
+        <span>Log out</span>
+      </button>
+    </mat-menu>
+
+    <!-- end of menu -->
   </mat-toolbar>
 </p>

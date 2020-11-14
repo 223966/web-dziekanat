@@ -1,0 +1,20 @@
+.avatar {
+  width: 60px !important;
+  height: 60px !important;
+}
+
+.profile-container {
+  display: grid;
+  gap: 1em;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  h3 {
+    margin: 0 !important;
+  }
+  p {
+    margin: 0 !important;
+  }
+}

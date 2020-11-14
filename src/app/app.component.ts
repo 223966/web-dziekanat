@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
+import { title } from 'process';
 import { Observable } from 'rxjs';
 import {
   getShowHeader,
@@ -14,6 +15,9 @@ import { State } from './state/app.state';
 })
 export class AppComponent implements OnInit {
   readonly mobileWidth: number = 600;
+
+  readonly options: string[] = ['Documents', 'IFE Website', 'Wikamp'];
+
   showSidebar$: Observable<boolean>;
   showHeader$: Observable<boolean>;
   isMobile: boolean = window.innerWidth < this.mobileWidth;

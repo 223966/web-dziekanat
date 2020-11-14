@@ -5,6 +5,10 @@
     mode="side"
     [opened]="showSidebar$ | async"
   >
+    <mat-nav-list style="margin: 0; padding: 0" *ngFor="let option of options">
+      <a mat-list-item>{{ option }}</a>
+      <mat-divider></mat-divider>
+    </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <div class="app-container">

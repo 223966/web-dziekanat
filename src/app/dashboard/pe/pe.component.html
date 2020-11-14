@@ -1,1 +1,14 @@
-<p>pe works!</p>
+<h3>Select the classes you want to attend</h3>
+<mat-radio-group>
+  <mat-radio-button
+    *ngFor="let sport of sports"
+    [value]="sports.indexOf(sport)"
+    >{{ sport }}</mat-radio-button
+  >
+</mat-radio-group>
+<custom-button
+  type="flat"
+  color="accent"
+  actionName="Sign Up"
+  (click)="signUp()"
+></custom-button>

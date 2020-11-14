@@ -11,6 +11,9 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { CustomButtonComponent } from './components/custom-button/custom-button.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -29,6 +32,9 @@ import { MatInputModule } from '@angular/material/input';
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
+    MatRadioModule,
+    MatMenuModule,
+    MatSnackBarModule,
     StoreModule.forFeature('header', headerReducer),
   ],
   exports: [
@@ -38,6 +44,8 @@ import { MatInputModule } from '@angular/material/input';
     MatInputModule,
     FormsModule,
     ReactiveFormsModule,
+    MatRadioModule,
+    MatSnackBarModule,
   ],
 })
 export class SharedModule {}
